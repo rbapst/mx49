@@ -1,0 +1,9 @@
+#!/bin/bash
+HWDEV=hw:1,0,0
+REQUEST="F0 43 30 7F 17 00 00 00 F7"
+REQUEST="F0 43 30 7F 17 36 00 01 F7"
+NAME=SYSTEM-System
+DEVICE=mx49
+amidi -p $HWDEV -S $REQUEST -r $DEVICE-${NAME}.syx -t2
+echo $REQUEST
+hd $DEVICE-${NAME}.syx
