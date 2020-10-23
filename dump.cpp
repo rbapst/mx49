@@ -71,6 +71,7 @@ char * hex(unsigned int v, unsigned char w) {
     i++;
   }
   BUFFER[w]='\0';
+  return BUFFER;
 }
 
 class MX49AddressInfo
